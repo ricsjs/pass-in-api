@@ -9,11 +9,11 @@ class EventsRepository:
         with db_connection_handler as database:
             try:
                 event = Events(
-                id=eventsInfo.get("uuid"),
-                title=eventsInfo.get("title"),
-                details=eventsInfo.get("details"),
-                slug=eventsInfo.get("slug"),
-                maximum_attendees=eventsInfo.get("maximum_attendees"),
+                    id=eventsInfo.get("uuid"),
+                    title=eventsInfo.get("title"),
+                    details=eventsInfo.get("details"),
+                    slug=eventsInfo.get("slug"),
+                    maximum_attendees=eventsInfo.get("maximum_attendees"),
                 )
                 database.session.add(event)
                 database.session.commit()
